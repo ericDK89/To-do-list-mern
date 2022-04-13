@@ -14,7 +14,7 @@ export default function PostData() {
         text: text
       }
       axios.post('http://localhost:3001/additem', payload)
-        .then(() => {console.log('added data from axios');})
+        .then(() => alert('Created'))
         .catch((error) => {console.log('unable to add data from axios ' + error);})
     }
 

@@ -27,7 +27,7 @@ export default function Header() {
                 <h1> {item.title} </h1>
                 <p> {item.text} </p>
                 <Link to='/edit/:id'><button>Edit</button></Link>
-                <button onClick={(event) => {handleDelete(item._id, event)}} >Delete</button>
+                <button onClick={(event) => {handleDelete(item._id, event)}}>Delete</button>
               </div>
             )
         })}
