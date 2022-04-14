@@ -8,6 +8,8 @@
 
 ![MongoDB](https://user-images.githubusercontent.com/68076508/163448795-64700937-4742-473e-9940-9fe6208f788f.png)
 
+Aqui os itens marcados são alterados como "done" no banco de dados, equanto o que não está marcado aparece como "undone". 
+
 # 👨‍💻 Tecnologias utilizadas
 
 ✔️React
