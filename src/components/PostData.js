@@ -1,30 +1,39 @@
 import React, { useState } from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 
 export default function PostData() {
 
-    const [title, setTitle] = useState('')
     const [text, setText] = useState('')
+    
 
     const handleClick = (event) => {
       event.preventDefault()
-      console.log(title, text);
+      console.log(text)
       const payload = {
-        title: title,
-        text: text
+        text: text,
       }
       axios.post('http://localhost:3001/additem', payload)
-        .then(() => alert('Created'))
+        .then(function(){
+          if(text === ''){
+            return alert('Cant be empty')
+          }else{
+            return window.location = '/'
+          }
+        })
         .catch((error) => {console.log('unable to add data from axios ' + error);})
     }
 
   return (
-    <div>
+    <div className='container'>
+      <h1 className='title-add'>Add new item</h1>
       <form>
-        <input name='title' value={title} type='text' onChange={(event) => {setTitle(event.target.value)}}/>
-        <input name='text' value={text} type='text' onChange={(event) => {setText(event.target.value)}}/>
-        <button type='submit' onClick={handleClick}>Add</button>
+        <input text='text' value={text} type='text' placeholder='Text' onChange={(event) => {setText(event.target.value)}}/>
+        <button className='btn-add' type='submit' onClick={handleClick}>Add</button>
+        <Link to='/'><button className='btn-cancel' >Cancel</button></Link>
       </form>
     </div>
   )
 }
+
+
