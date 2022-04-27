@@ -28,4 +28,5 @@ Aqui os itens marcados são alterados como "done" no banco de dados, equanto o q
 
   A ideia desse projeto era praticar uma aplicação onde o client se conecta com o server, junto com um banco de dados. Aqui utilizei axios unido com as rotas: GET, POST, DELETE e PUT. 
 
-Feito por Eric 🌌[ Veja meu LinkedIn ]
+Feito por Eric 🌌<a href='https://www.linkedin.com/in/eric-macedo-9b47601b1/'>[ Veja meu LinkedIn ]</a>
+
